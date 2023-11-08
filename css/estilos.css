@@ -1,0 +1,220 @@
+/*SE APLICA A TODO EL CÓDIGO*/
+*{
+    font-family: 'Arial';                               /*tipo de letra*/
+}
+
+/*JUSTIFICAR TODA LA PÁGINA*/
+body{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/*PONER EL TÍTULO SOBRE LA IMÁGEN*/
+.contenedorImagen{
+    position: relative;                                 /*referencia "padre"*/
+    display: inline-block;                              /*justificar el contenido*/
+    margin: 35px auto;
+    display: flex;                                      /*poner los dos siguientes juntos para poner mérgenes*/
+    flex-direction: column;
+    border-radius: 60px;                                /*redondea el borde de la imágen*/
+    background-size: cover;
+}
+
+.titulo{
+    position: absolute;                                 /*referencia "hijo"*/
+    font-size: 40px;
+    top: 5%;                                           /*alinear el título arriba de la imágen*/
+    left: 20%;                                          /*centra el título horizontalmente*/
+    color: white;                                     /*color del título*/
+    padding: 10px;                                      /*espacio dentro del título*/
+    margin: 10px;                               
+}
+
+/*ENCABEZADO*/
+h2{
+    text-align: center;                                 /*justificar el texto en el centro*/
+    margin: 35px;
+    font-size: 27px;
+}
+
+/*MENÚ DE NAVEGACIÓN*/
+nav {
+    display: flex;                                      /* para centrar el contenido horizontalmente*/
+    justify-content: center;
+}
+
+ul{
+    list-style-type:none;                               /*quitar puntitos*/
+    margin: 0;
+    padding: 0;
+    overflow: hidden;                                   /*ocultar cualquier tipo de navegación*/
+    background-color: rgb(180, 180, 180);
+}
+
+li{
+    float: left;                                        /*los ponemos a la izq*/
+    border-right: 1px solid rgb(255, 255, 255);
+}
+/*quitar la última línea de separación*/
+li:last-child{
+    border-right: none;
+}
+li a{
+    display: block;                                 /*ocupan todo el ancho*/
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;                          /*quitar subrayado*/
+}
+/*cambiar el color de fondo cuando pasamos por arriba*/
+li a:hover{
+    background-color: rgb(255, 144, 47);
+}
+
+
+
+h3{
+    font-size: 21px;
+    margin-left: 9.5%;
+}
+p{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+h4{
+   margin-left: 10%; 
+   margin-bottom: 5px;
+}
+
+/*TABLAS*/
+.primera{
+    text-align: center;
+}
+.tablas{
+    margin: 0 auto;
+    width: 80%;
+}
+table, th{
+    border: 2px solid black;
+} 
+th{
+    height: 10px;                                       /*altura*/
+    background-color: rgb(84, 84, 84);
+    color: white;
+}
+tr, td{
+    border: 1px solid black;
+    width: 190px;
+    padding: 11px;
+}
+
+table{
+    border-collapse: collapse;                          /* HACERLO SIEMPRE (unificar las líneas)*/
+
+}
+.primeraColumna{
+    border: 2px solid black;
+}
+.segundaColumna{
+    width: 400px;
+    height: 100px;
+}
+/*poner las filas pares de un color*/
+tr:nth-child(even){
+    background-color: rgb(209, 209, 209);
+    color: rgb(2, 2, 2);
+}
+
+/*poner las filas impares de un color*/
+tr:nth-child(odd){
+    background-color: rgb(240, 238, 238);
+    color: rgb(9, 9, 9);
+}
+
+/*se cambia el color de las filas cuando pasamos por encima*/
+tr:hover{
+    background-color: rgb(255, 144, 47);
+}
+
+
+/*ENCUESTA*/
+form{
+    display: inline-flex;
+    height: 90px;
+    padding: 20px;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: rgb (209, 209, 209);
+    width: 75.8%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*Cambiar el tamaño de la caja de repsuesta del texto de forma manual para ajustarlo a la respuesta introducida*/
+textarea{
+    resize: vertical;
+    max-height: 300px;
+    min-height: 100px;
+}
+input, textarea{
+    margin-bottom: 20px;
+    padding: 10px;                                         /*espacio dentro de la caja de respuesta*/
+    box-sizing: border-box;                                /*HACER SIEMPRE!!! ajustar los bordes*/
+    border: 1px solid grey;
+}
+/*cuando el usuario selecciona el input para escribir una respuesta*/
+input:focus, textarea{
+    border: 1 px solid black;
+}
+/*cambiar formato botón enviar*/
+input[type="submit"]{
+    margin-bottom: 0;
+    background: blue;
+    color: white;
+    border: none;
+}
+/*cuando pasamos por encima del botón enviar*/
+input[type="submit"]:hover{
+    background: blue;
+    cursor: pointer;                                        /*cambia de una flacha a una mano para hacer click*/
+    justify-content: center;                                /*alinear en el centro*/
+}
+
+/*ENLACES*/
+/*link normal*/
+#enlaces{
+    border: 2 solid black;
+    text-align: center;
+}
+a:link{
+    color: black;
+    text-decoration: none;                              /*quitar subrayado link*/
+}
+
+/*cambiar color cuando has visitado el link*/
+a:visited{
+    color: green;
+}
+
+/*cambiar el color cuando pasamos por arriba del link*/
+a:hover{
+    background-color: rgb(255, 144, 47);
+}
+
+
+/*FOOTER*/
+footer{
+    font-size: 10px;
+    text-align: center;
+}
+
+footer p{
+    text-align: center;
+}
+
+
+
